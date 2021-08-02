@@ -57,6 +57,7 @@ def video_defined_frame(input, output, start, end=-1):
         k = end - start + 1
         while (k >= 0):
             times += 1
+            k -= 1
             res, image = cap.read()
             if not res:
                 print('loading finishing')
@@ -85,8 +86,8 @@ if __name__ == '__main__':
     input = 'D://Code_Workspace_python/opencv/example_driven_guide_opencv/src/video/video_example/Sample of output.mp4'
     output = 'D://Code_Workspace_python/opencv/example_driven_guide_opencv/src/video/image_example'
     show_frame(input, 4)
-    video_frame(input, output)
-    # video_defined_frame(input, output, 0, 6)
+    # video_frame(input, output)
+    video_defined_frame(input, output, 0, 70)
     
     
     
