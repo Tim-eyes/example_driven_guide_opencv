@@ -2,7 +2,7 @@ from matplotlib import pyplot as plot
 import argparse
 import cv2
 import numpy as np
-import mahotas
+import mahotas as mh
 
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--image", required = True,
@@ -15,7 +15,7 @@ cv2.imshow("Original", image)
 
 blurred = cv2.GaussianBlur(image, (5, 5), 0)
 
-T = mahotas.thresholding.otsu(blurred)
+T = mh.otsu(blurred)
 print("Otsu’s threshold: {}".format(T))
 
 thresh = image.copy()
@@ -24,7 +24,7 @@ thresh[thresh<255]=0
 thresh=cv2.bitwise_not(thresh)
 cv2.imshow("Otsu",thresh)
 
-T=mahotas.thresholding.rc(blurred)
+T = mh.rc(blurred)
 print("Riddle-Calvard: {}".format(T))
 thresh = image.copy()
 thresh[thresh > T]=255

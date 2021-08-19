@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-image = cv2.imread("must_logo.png", 0)
+image = cv2.imread("../img_source/must_logo.png", 0)
 
 row, col = image.shape
 
