@@ -34,5 +34,9 @@ Essential syntax for `jupyter` is below:
 jupyter notebook [IPYNB-FILE-PATH]
 ```
 > More info in folder [Notebooks](notebooks/)
-> - 
-> - hg
+> - [01_Introduction.ipynb](notebooks/01_Introduction.ipynb)
+> - [02_Basic_Drawing.ipynb](notebooks/02_Basic_Drawing.ipynb)
+> - [03_OpenCV_and_matplotlib.ipynb](notebooks/03_OpenCV_and_matplotlib.ipynb)
+> - [04_Gray_graphy.ipynb](notebooks/04_Gray_graphy.ipynb)
+> - [05_Advanced_graphic_processing.ipynb](notebooks/05_Advanced_graphic_processing.ipynb)
+
